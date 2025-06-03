@@ -20,10 +20,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Build with Maven
-      run: mvn clean install
-
-    - name: Deploy to GitHub Packages
+    - name: Publish to Github Packages Apache Maven
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: mvn deploy -Dmaven.test.skip=true
+      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
