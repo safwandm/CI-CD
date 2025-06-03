@@ -4,7 +4,6 @@
   <artifactId>ContohProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-
 <distributionManagement>
     <repository>
       <id>github</id>
